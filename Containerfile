@@ -15,7 +15,7 @@ ENV PYTHONUNBUFFERED=1
 # Packages are included for these purposes:
 #
 # - Overall compatibility and network functionality:
-#   iproute procps systemd which
+#   ca-certificates iproute procps systemd which
 #
 # - Easier debugging within the container (good feature-to-size ratio):
 #   iputils less vim-small
@@ -23,6 +23,7 @@ ENV PYTHONUNBUFFERED=1
 # - Accessing a container via Ansible:
 #   python312 sudo
 RUN zypper --non-interactive install \
+        ca-certificates \
         iproute \
         procps \
         systemd \
